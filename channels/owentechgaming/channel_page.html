@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel Name - Owen Tech Videos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .channel-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .channel-header img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .channel-header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .channel-banner {
+            width: 100%;
+            height: 200px;
+            background: url('channel_banner.jpg') no-repeat center center;
+            background-size: cover;
+            margin-bottom: 20px;
+        }
+
+        .tab-menu {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab-menu a {
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+            background-color: #f1f1f1;
+            font-size: 1em;
+            border: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .tab-menu a:hover {
+            background-color: #ccc;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .video-thumbnail {
+            text-align: center;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: auto;
+        }
+
+        .video-thumbnail h3 {
+            margin: 10px 0 5px 0;
+            font-size: 1.2em;
+        }
+
+        .video-thumbnail p {
+            margin: 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <!-- Include header content here -->
+    </header>
+
+    <!-- Main content section -->
+    <main>
+        <!-- Channel banner section -->
+        <div class="channel-banner"></div>
+
+        <!-- Channel header section -->
+        <section class="channel-header">
+            <img src="channel_icon.jpg" alt="Channel Icon">
+            <h1>Channel Name</h1>
+        </section>
+
+        <!-- Tab menu -->
+        <div class="tab-menu">
+            <a href="videos_page.html">Videos</a>
+            <a href="playlists_page.html">Playlists</a>
+        </div>
+
+        <!-- Recent videos section -->
+        <section class="recent-videos">
+            <h2>Recent Videos</h2>
+            <div class="video-grid">
+                <!-- Sample video thumbnails, replace with actual content -->
+                <div class="video-thumbnail">
+                    <a href="video_page.html">
+                        <img src="video_thumbnail1.jpg" alt="Video 1">
+                        <h3>Recent Video Title 1</h3>
+                        <p>Uploader: Channel Name</p>
+                    </a>
+                </div>
+                <div class="video-thumbnail">
+                    <a href="video_page.html">
+                        <img src="video_thumbnail2.jpg" alt="Video 2">
+                        <h3>Recent Video Title 2</h3>
+                        <p>Uploader: Channel Name</p>
+                    </a>
+                </div>
+                <!-- Add more recent video thumbnails here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <!-- Include footer content here -->
+    </footer>
+</body>
+</html>

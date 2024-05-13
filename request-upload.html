@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Upload and Channel - Owen Tech Videos</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <!-- Main content section -->
+    <main>
+        <!-- Request video upload section -->
+        <section class="request-upload">
+            <h2>Request Video Upload</h2>
+            <form id="upload-form">
+                <label for="video-name">Video Name:</label><br>
+                <input type="text" id="video-name" name="video-name"><br>
+                <label for="channel-name">Channel Name:</label><br>
+                <input type="text" id="channel-name" name="channel-name"><br>
+                <label for="description">Description:</label><br>
+                <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+                <button type="submit" id="submit-btn">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById("upload-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const videoName = document.getElementById("video-name").value;
+            const channelName = document.getElementById("channel-name").value;
+            const description = document.getElementById("description").value;
+
+            // Construct email subject and body
+            const subject = `Video Upload Request: ${videoName} - ${channelName}`;
+            const body = `Video Name: ${videoName}%0D%0AChannel Name: ${channelName}%0D%0ADescription: ${description}`;
+
+            // Create email link
+            const emailLink = `mailto:owentech1@outlook.com?subject=${subject}&body=${body}`;
+
+            // Open default email client
+            window.location.href = emailLink;
+        });
+    </script>
+</body>
+</html>

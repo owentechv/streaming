@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlists - Owen Tech Videos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+                .channel-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .channel-header img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .channel-header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .channel-banner {
+            width: 100%;
+            height: 200px;
+            background: url('channel1_banner.jpg') no-repeat center center;
+            background-size: cover;
+            margin-bottom: 20px;
+        }
+
+        .tab-menu {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab-menu a {
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+            background-color: #f1f1f1;
+            font-size: 1em;
+            border: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .tab-menu a:hover {
+            background-color: #ccc;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .video-thumbnail {
+            text-align: center;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: auto;
+        }
+
+        .video-thumbnail h3 {
+            margin: 10px 0 5px 0;
+            font-size: 1.2em;
+        }
+
+        .video-thumbnail p {
+            margin: 0;
+            color: #555;
+        }
+
+        .playlist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .playlist-thumbnail {
+            text-align: center;
+        }
+
+        .playlist-thumbnail img {
+            width: 100%;
+            height: auto;
+        }
+
+        .playlist-thumbnail h3 {
+            margin: 10px 0 5px 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">Owen Tech Videos</div>
+    <nav>
+        <ul>
+            <li><a href="https://owentechv.github.io/streaming/index.html">Home</a></li>
+            <li><a href="https://owentechv.github.io/streaming/browse.html">Browse</a></li>
+            <li><a href="https://owentechv.github.io/streaming/categories.html">Categories</a></li>
+            <li><a href="https://owentechv.github.io/streaming/request-upload.html">Request Upload/Channel</a></li>
+            <li><a href="https://owentechv.github.io/streaming/about.html">About</a></li>
+        </ul>
+    </nav>
+    </div>
+</header>
+    <main>
+        <div class="channel-banner"></div>
+
+        <!-- Channel header section -->
+        <section class="channel-header">
+            <img src="channel1_icon.jpg" alt="Channel Icon">
+            <h1>Owen Tech Gaming</h1>
+        </section>
+
+        <!-- Tab menu -->
+        <div class="tab-menu">
+            <a href="channel_page.html">Home</a>
+            <a href="videos_page.html">Videos</a>
+            <a href="playlists_page.html">Playlists</a>
+        </div>
+        <h1>All Playlists</h1>
+        <div class="playlist-grid">
+            <!-- Sample playlist thumbnails, replace with actual content -->
+            <div class="playlist-thumbnail">
+                <a href="playlist_page.html">
+                    <img src="playlist_thumbnail1.jpg" alt="Playlist 1">
+                    <h3>Playlist Title 1</h3>
+                </a>
+            </div>
+            <div class="playlist-thumbnail">
+                <a href="playlist_page.html">
+                    <img src="playlist_thumbnail2.jpg" alt="Playlist 2">
+                    <h3>Playlist Title 2</h3>
+                </a>
+            </div>
+            <!-- Add more playlist thumbnails here -->
+        </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <!-- Include footer content here -->
+    </footer>
+</body>
+</html>

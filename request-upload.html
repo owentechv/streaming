@@ -3,46 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request Upload and Channel - Owen Tech Videos</title>
+    <title>Request Upload - Video Streaming Site</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header, footer {
+            background-color: #f8f8f8;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="url"],
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .form-group button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
     </style>
+    <script>
+        function sendEmail(event) {
+            event.preventDefault();
+            const channelName = document.getElementById('channelName').value;
+            const videoLink = document.getElementById('videoLink').value;
+
+            const subject = `Video Upload Request from ${channelName}`;
+            const body = `Channel Name: ${channelName}\nYouTube Video Link: ${videoLink}`;
+
+            window.location.href = `mailto:owentech1@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+    </script>
 </head>
 <body>
+    <!-- Header section -->
+    <header>
+        <h1>Video Streaming Site</h1>
+    </header>
+
     <!-- Main content section -->
     <main>
-        <!-- Request video upload section -->
-        <section class="request-upload">
-            <h2>Request Video Upload</h2>
-            <form id="upload-form">
-                <label for="video-name">Video Name:</label><br>
-                <input type="text" id="video-name" name="video-name"><br>
-                <label for="channel-name">Channel Name:</label><br>
-                <input type="text" id="channel-name" name="channel-name"><br>
-                <label for="description">Description:</label><br>
-                <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
-                <button type="submit" id="submit-btn">Submit</button>
+        <h1>Request Video Upload</h1>
+        <div class="form-container">
+            <form onsubmit="sendEmail(event)">
+                <div class="form-group">
+                    <label for="channelName">Channel Name:</label>
+                    <input type="text" id="channelName" name="channelName" required>
+                </div>
+                <div class="form-group">
+                    <label for="videoLink">YouTube Video Link:</label>
+                    <input type="url" id="videoLink" name="videoLink" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
             </form>
-        </section>
+        </div>
     </main>
 
-    <script>
-        document.getElementById("upload-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            const videoName = document.getElementById("video-name").value;
-            const channelName = document.getElementById("channel-name").value;
-            const description = document.getElementById("description").value;
-
-            // Construct email subject and body
-            const subject = `Video Upload Request: ${videoName} - ${channelName}`;
-            const body = `Video Name: ${videoName}%0D%0AChannel Name: ${channelName}%0D%0ADescription: ${description}`;
-
-            // Create email link
-            const emailLink = `mailto:owentech1@outlook.com?subject=${subject}&body=${body}`;
-
-            // Open default email client
-            window.location.href = emailLink;
-        });
-    </script>
+    <!-- Footer section -->
+    <footer>
+        <!-- Include footer content here -->
+    </footer>
 </body>
 </html>
